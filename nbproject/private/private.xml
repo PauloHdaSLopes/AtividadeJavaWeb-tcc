@@ -2,9 +2,8 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="Interfile">
-            <file>file:/C:/Users/mt11201/Documents/NetBeansProjects/JavaWeb/web/index.html</file>
-            <file>file:/C:/Users/mt11201/Documents/NetBeansProjects/JavaWeb/web/css/style.css</file>
+        <group>
+            <file>file:/C:/Users/mt11201/Documents/NetBeansProjects/AtividadeJavaWeb-tcc/src/java/tcc/stock/dao/sqlConnection.java</file>
         </group>
     </open-files>
 </project-private>
