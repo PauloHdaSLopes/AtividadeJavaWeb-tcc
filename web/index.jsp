@@ -36,13 +36,17 @@
                     <section class="login_content">
                         <form action="LoginServlet">
                             <h1>Login</h1>
+                            <%
+                                if (valid != null && valid.equals("false")) {
+                                    out.println("<div class='alert alert-warning alert-dismissible fade in' role='alert'>"
+                                            + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>×</span>"
+                                            + "</button>"
+                                            + "<strong>Usuario/Senha invalido</strong> tente outra vez!"
+                                            + "</div>");
+                                }
+                            %>    
                             <div>
                                 <input type="text" class="form-control" placeholder="Username" name="Username" required="" />
-                                <%
-                                    if (valid != null && valid.equals("false")) {
-                                        out.println("Usuário invalido");
-                                    }
-                                %>
                             </div>
                             <div> 
                                 <input type="password" class="form-control" placeholder="Password" name="Password" required="" />

@@ -1,5 +1,7 @@
+<%@page import="tcc.stock.model.Usuario"%>
+
 <%
-    String username = "Paulo Lopes";
+    Usuario usuario = (Usuario) session.getAttribute("currentSessionUser");
 %>
 <div class="col-md-3 left_col">
   <div class="left_col scroll-view">
@@ -16,7 +18,7 @@
       </div>
       <div class="profile_info">
         <span>Welcome,</span>
-        <h2><%= username %></h2>
+        <h2><%= usuario.getNome() %></h2>
       </div>
       <div class="clearfix"></div>
     </div>
@@ -58,7 +60,7 @@
       <a data-toggle="tooltip" data-placement="top" title="Lock">
         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
       </a>
-      <a data-toggle="tooltip" data-placement="top" title="Logout" href="index.jsp">
+      <a data-toggle="tooltip" data-placement="top" title="Logout" href="../index.jsp">
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
       </a>
     </div>
@@ -77,7 +79,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="">
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="../production/images/img.jpg" alt=""><%= username %>
+            <img src="../production/images/img.jpg" alt=""><%= usuario.getNome() %>
             <span class=" fa fa-angle-down"></span>
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">

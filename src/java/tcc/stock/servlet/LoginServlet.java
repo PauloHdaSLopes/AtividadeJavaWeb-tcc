@@ -66,7 +66,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("currentSessionUser", user);
                 response.sendRedirect("default/modelo.jsp"); //logged-in page    
             } else {
-                response.sendRedirect("../index.jsp?usuarioInvalido=false"); //error page 
+                response.sendRedirect("../index.jsp?usuarioValido=false"); //error page 
             }
         } catch (Exception e) {
             System.out.println("<h2>Ooops... Erro: " + e.getMessage() + "</h2>");
