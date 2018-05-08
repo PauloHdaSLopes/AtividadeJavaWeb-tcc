@@ -6,6 +6,7 @@
 package tcc.stock.model;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -15,12 +16,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -36,6 +39,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Usuario.findBySenha", query = "SELECT u FROM Usuario u WHERE u.senha = :senha")
     , @NamedQuery(name = "Usuario.findByDtcadastro", query = "SELECT u FROM Usuario u WHERE u.dtcadastro = :dtcadastro")})
 public class Usuario implements Serializable {
+
+    @OneToMany(mappedBy = "fkUsuario")
+    private Collection<Historicomovimento> historicomovimentoCollection;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -127,6 +133,15 @@ public class Usuario implements Serializable {
     @Override
     public String toString() {
         return "tcc.stock.model.Usuario[ id=" + id + " ]";
+    }
+
+    @XmlTransient
+    public Collection<Historicomovimento> getHistoricomovimentoCollection() {
+        return historicomovimentoCollection;
+    }
+
+    public void setHistoricomovimentoCollection(Collection<Historicomovimento> historicomovimentoCollection) {
+        this.historicomovimentoCollection = historicomovimentoCollection;
     }
     
 }

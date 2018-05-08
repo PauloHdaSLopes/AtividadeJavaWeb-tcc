@@ -35,7 +35,7 @@
           <li><a><i class="fa fa-edit"></i> Cadastro <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
               <li><a href="usuario.jsp">Usuário</a></li>
-              <li><a href="produto.jsp">Produto</a></li>
+              <li><a href="../pages/produto.jsp">Produto</a></li>
               <li><a href="fornecedor.jsp">Fornecedor</a></li>
               <li><a href="cliente.jsp">Cliente</a></li>
             </ul>

@@ -10,12 +10,14 @@ public class ProdutoDao{
         this.p = p;
     }
     
-    public void create(){
+    public boolean create(){
         try{
             con.addParameters(p.getDescricao());
             con.executeNonQuery("insert into Produto (descricao,ativo) values (?,1)");
+            return true;
         }catch(Exception e){
             System.out.println(e.getMessage());
+            return false;
         }
     }
     private void delete(){

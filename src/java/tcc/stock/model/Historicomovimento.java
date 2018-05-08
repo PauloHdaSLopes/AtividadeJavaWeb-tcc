@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author mt11201
+ * @author Paulo
  */
 @Entity
 @Table(name = "historicomovimento")
@@ -59,6 +59,9 @@ public class Historicomovimento implements Serializable {
     @Column(name = "dtcadastro")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtcadastro;
+    @JoinColumn(name = "fkUsuario", referencedColumnName = "id")
+    @ManyToOne
+    private Usuario fkUsuario;
     @JoinColumn(name = "fkproduto", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Produto fkproduto;
@@ -110,6 +113,14 @@ public class Historicomovimento implements Serializable {
 
     public void setDtcadastro(Date dtcadastro) {
         this.dtcadastro = dtcadastro;
+    }
+
+    public Usuario getFkUsuario() {
+        return fkUsuario;
+    }
+
+    public void setFkUsuario(Usuario fkUsuario) {
+        this.fkUsuario = fkUsuario;
     }
 
     public Produto getFkproduto() {
