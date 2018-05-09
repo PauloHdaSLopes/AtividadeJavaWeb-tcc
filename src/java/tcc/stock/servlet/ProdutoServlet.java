@@ -40,11 +40,10 @@ public class ProdutoServlet extends HttpServlet {
             
             ProdutoDao pDao = new ProdutoDao(produto);
             
-            
             if (pDao.create()) {
-                response.sendRedirect("produto.jsp?produtoInserido=true"); //logged-in page    
+                response.sendRedirect("pages/produto.jsp?produtoInserido=true"); //logged-in page    
             } else {
-                response.sendRedirect("produto.jsp?produtoInserido=true"); //error page 
+                response.sendRedirect("pages/produto.jsp?produtoInserido=false"); //error page 
             }
         } catch (Exception e) {
 
