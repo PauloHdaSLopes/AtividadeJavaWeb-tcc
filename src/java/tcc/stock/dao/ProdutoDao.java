@@ -1,5 +1,6 @@
 package tcc.stock.dao;
 
+import java.sql.ResultSet;
 import tcc.stock.model.Produto;
 
 public class ProdutoDao {
@@ -10,7 +11,9 @@ public class ProdutoDao {
     public ProdutoDao(Produto p) {
         this.p = p;
     }
+   public ProdutoDao() {
 
+    }
     public boolean create() {
         try {
             sqlCon.openConnection();
@@ -47,7 +50,24 @@ public class ProdutoDao {
             System.out.println(e.getMessage());
         }
     }
-//    private Produto find(){
-//        
-//    }
+    public Produto find(String id){
+        Produto pReturn = new Produto();
+        try {
+            sqlCon.openConnection();
+            sqlCon.cleanParameters();
+            sqlCon.addParameters(id);
+            ResultSet rs = sqlCon.executeQuery("select * from produto where id = ?");
+            while (rs.next()) {                
+               pReturn.setAtivo(rs.getBoolean("Ativo"));
+               pReturn.setDescricao(rs.getString("Descricao"));
+               pReturn.setDtcadastro(rs.getDate("DtCadastro"));
+               pReturn.setId(rs.getInt("Id"));
+            }
+            sqlCon.closeConnection();
+            return pReturn;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
 }
