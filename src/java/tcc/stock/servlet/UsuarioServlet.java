@@ -33,7 +33,21 @@ public class UsuarioServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        try {
+            Usuario usuario = new Usuario();
 
+            usuario.setNome(request.getParameter("Username"));
+            usuario.setSenha(request.getParameter("Password"));
+            
+            UsuarioDao uDao = new UsuarioDao(usuario);
+
+            uDao.create();
+
+            response.sendRedirect("pages/usuarioCadastrado.jsp?isSucess=true"); //logged-in page    
+        } catch (Exception e) {
+            response.sendRedirect("pages/usuarioCadastrado.jsp?isSucess=false"); //logged-in page    
+            System.out.println("Erro: " + e.getMessage());
+        }
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -48,20 +62,7 @@ public class UsuarioServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            Usuario usuario = new Usuario();
-
-            usuario.setNome(request.getParameter("Username"));
-            usuario.setSenha(request.getParameter("Password"));
-
-            UsuarioDao uDao = new UsuarioDao(usuario);
-
-            uDao.create();
-
-            response.sendRedirect("pages/usuario.jsp"); //logged-in page    
-        } catch (Exception e) {
-            System.out.println("Erro: " + e.getMessage());
-        }
+        processRequest(request, response);
     }
 
     /**

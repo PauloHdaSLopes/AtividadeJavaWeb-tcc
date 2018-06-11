@@ -44,7 +44,7 @@
                                             + "<strong>Usuario/Senha invalido</strong> tente outra vez!"
                                             + "</div>");
                                 }
-                            %>    
+                            %>
                             <div>
                                 <input type="text" class="form-control" placeholder="Username" name="Username" required="" />
                             </div>

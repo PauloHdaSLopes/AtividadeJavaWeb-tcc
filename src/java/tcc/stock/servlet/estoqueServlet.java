@@ -35,18 +35,11 @@ public class estoqueServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        response.setContentType("text/html;charset=UTF-8");
-//        try (PrintWriter out = response.getWriter()) {
-//            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet estoque</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet estoque at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
+        try {
+            
+        } catch (Exception e) {
+        }
+        
         }
 //    }
 
@@ -62,6 +55,7 @@ public class estoqueServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
 //        processRequest(request, response);
         String acao = request.getParameter("Acao");
         String FkProduto = request.getParameter("codigo");
@@ -76,12 +70,12 @@ public class estoqueServlet extends HttpServlet {
         
         switch(acao){
             
-            case 1:
-                hDao.retirar(h);
-                break;
-            case 2:
-                hDao.armazenar(h);
-                break;
+//            case 1:
+//                hDao.retirar(h);
+//                break;
+//            case 2:
+//                hDao.armazenar(h);
+//                break;
             default:
                 break;
         }
@@ -110,5 +104,11 @@ public class estoqueServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+    public void List()throws Exception{
+        try {
+            
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }

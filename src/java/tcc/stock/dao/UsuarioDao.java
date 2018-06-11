@@ -44,7 +44,7 @@ public class UsuarioDao {
         return user;
     }
 
-    public void create() {
+    public void create() throws Exception {
         try {
             sqlCon.openConnection();
             sqlCon.cleanParameters();
@@ -54,7 +54,7 @@ public class UsuarioDao {
 
             sqlCon.closeConnection();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+           throw e;
         }
     }
 }

@@ -5,6 +5,7 @@
  */
 package tcc.stock.dao;
 
+import java.sql.ResultSet;
 import tcc.stock.model.Estoque;
 
 /**
@@ -45,6 +46,16 @@ public class EstoqueDao {
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
+    }
+    private ResultSet List(){
+        try{
+            con.cleanParameters();
+            return con.executeQuery("select  B.id, B.descricao,A.posicao, B.dtcadastro from estoque A join produto B on A.fkproduto = B.id");
+            
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return null;
     }
 //    private Produto find(){
 //        
