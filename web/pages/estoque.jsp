@@ -65,12 +65,33 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <%
-                                                                        estoqueServlet eServ = new estoqueServlet();
-                                                                        eServ.processRequest(request, response);
-                                                                    %>
+                                                                    
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="sorting_1">Mast iroo</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td>33</td>
+                                                                        <td>2008/11/28</td>
+                                                                        <td>$162,700</td>
+                                                                    </tr>
                                                                     <tr role="row" class="odd">
                                                                         <td class="sorting_1">Airi Satou</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td>33</td>
+                                                                        <td>2008/11/28</td>
+                                                                        <td>$162,700</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="sorting_1">seik koou</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td>33</td>
+                                                                        <td>2008/11/28</td>
+                                                                        <td>$162,700</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="sorting_1">ali sidn</td>
                                                                         <td>Accountant</td>
                                                                         <td>Tokyo</td>
                                                                         <td>33</td>

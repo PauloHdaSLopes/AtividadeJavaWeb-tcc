@@ -21,7 +21,14 @@ SET time_zone = "+00:00";
 --
 -- Database: `id5529267_stockprodatabase`
 --
+create table usuario(
+    id int primary key AUTO_INCREMENT
+    ,nome varchar(101)
+    ,senha int
+    ,dtcadastro timestamp
+)
 
+insert into usuario (nome,senha,dtcadastro)values("Teste 22",222,now())
 -- --------------------------------------------------------
 
 --

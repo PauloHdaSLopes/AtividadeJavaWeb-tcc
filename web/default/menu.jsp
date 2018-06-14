@@ -36,8 +36,8 @@
                         <ul class="nav child_menu">
                             <li><a href="../pages/usuario.jsp">Usuário</a></li>
                             <li><a href="../pages/produto.jsp">Produto</a></li>
-                            <li><a href="fornecedor.jsp">Fornecedor</a></li>
-                            <li><a href="cliente.jsp">Cliente</a></li>
+<!--                            <li><a href="fornecedor.jsp">Fornecedor</a></li>
+                            <li><a href="cliente.jsp">Cliente</a></li>-->
                         </ul>
                     </li>
                     <li><a href="../pages/estoque.jsp"><i class="fa fa-bitbucket"></i> Estoque</a>
@@ -47,10 +47,10 @@
                             <li><a href="#">Armazenar Produto</a></li>
                         </ul>-->
                     </li>
-                    <li><a href="relatorio.jsp"><i class="fa fa-bar-chart-o"></i> Relatórios </a></li>
-                    <li><a href="vendas.jsp"><i class="fa fa-envelope-o"></i> Vendas </a></li>
+                    <!--<li><a href="relatorio.jsp"><i class="fa fa-bar-chart-o"></i> Relatórios </a></li>-->
+<!--                    <li><a href="vendas.jsp"><i class="fa fa-envelope-o"></i> Vendas </a></li>
                     <li><a href="configuracao.jsp"><i class="fa fa fa-gears"></i> Configurações </a></li>
-                    <li><a href="equipe.jsp"><i class="fa fa-group"></i> Equipe </a></li>
+                    <li><a href="equipe.jsp"><i class="fa fa-group"></i> Equipe </a></li>-->
             </div>
 
         </div>
